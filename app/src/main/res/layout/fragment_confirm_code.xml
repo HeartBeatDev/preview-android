@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auth_main_background"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="20dp"
+        android:src="@drawable/main_full_logo"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/auth_title_background"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:minHeight="70dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:shadowColor="#B3000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@id/subTitle"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/codeContainer"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/codeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/phone_input_background"
+        android:gravity="center_vertical"
+        android:maxWidth="375dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toTopOf="@id/confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <com.jkb.vcedittext.VerificationCodeEditText
+            android:id="@+id/inputCode"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="48dp"
+            android:inputType="number"
+            android:paddingBottom="12dp"
+            android:textColor="@color/colorInputCodeUnderline"
+            android:textSize="24sp"
+            app:bottomLineHeight="2.5dp"
+            app:bottomLineNormalColor="@color/colorInputCodeUnderline"
+            app:bottomLineSelectedColor="@color/colorInputCodeUnderline"
+            app:figures="4"
+            app:selectedBackgroundColor="@android:color/transparent"
+            app:verCodeMargin="32dp"
+            />
+
+        <TextView
+            android:id="@+id/inputCodeError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorInputCodeErrorText"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/register_button_background"
+        android:gravity="center"
+        android:maxWidth="375dp"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/changePhone"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/changePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/resendCode"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/resendCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/content_text_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

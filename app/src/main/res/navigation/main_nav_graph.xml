@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashScreen"
+    >
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.preview.android.presentation.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        >
+
+        <action
+            android:id="@+id/navigateToRegistrationScreen"
+            app:destination="@id/registrationScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationScreen"
+        android:name="com.preview.android.presentation.ui.registration.RegistrationFragment"
+        tools:layout="@layout/fragment_registration"
+        />
+
+    <fragment
+        android:id="@+id/confirmCodeScreen"
+        android:name="com.preview.android.presentation.ui.code.ConfirmCodeFragment"
+        tools:layout="@layout/fragment_confirm_code"
+        >
+        <action
+            android:id="@+id/navigateToRegistrationScreen"
+            app:destination="@id/registrationScreen"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/main_nav_graph"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/offersScreen"
+        android:name="com.preview.android.presentation.ui.offers.OffersFragment"
+        tools:layout="@layout/fragment_offers"
+        />
+
+    <action
+        android:id="@+id/navigateToConfirmCodeScreen"
+        app:destination="@id/confirmCodeScreen"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/main_nav_graph"
+        app:popUpToInclusive="true"
+        />
+
+    <action
+        android:id="@+id/navigateToOffersScreen"
+        app:destination="@id/offersScreen"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@+id/main_nav_graph"
+        app:popUpToInclusive="true"
+        />
+
+</navigation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="errorDialogTitle">Connection error</string>
+    <string name="errorDialogMessage">Check your connection and repeat</string>
+    <string name="errorDialogButton">Repeat</string>
+    <string name="confirm">Confirm</string>
+    <string name="changePhone">Change phone</string>
+</resources>

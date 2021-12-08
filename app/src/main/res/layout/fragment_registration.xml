@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/auth_main_background"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="20dp"
+        android:src="@drawable/main_full_logo"
+        app:layout_constraintBottom_toTopOf="@id/titleContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/auth_title_background"
+        android:gravity="center"
+        android:maxWidth="375dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@id/phoneContainer"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:shadowColor="#B3000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:shadowColor="#B3000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:id="@+id/phoneContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/phone_input_background"
+        android:gravity="center_vertical"
+        android:maxWidth="375dp"
+        android:minHeight="60dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toTopOf="@id/register"
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccpDialog_allowSearch="false"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccp_hintExampleNumber="true"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="17sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/phoneInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorInputFieldHint"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/register"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/register_button_background"
+        android:gravity="center"
+        android:maxWidth="375dp"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/playLikeGuest"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/playLikeGuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/privacyPolicyContainer"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/privacyPolicyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacyPolicyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

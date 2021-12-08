@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EBBC15</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorSecondary">#000000</color>
+    <color name="colorAccent">#EBBC15</color>
+
+    <color name="colorInputFieldHint">#A8A8A8</color>
+
+    <color name="colorProgressIndicatorBackground">#80000000</color>
+
+    <color name="colorDisableText">#C9C9C9</color>
+
+    <color name="colorInputCodeErrorText">#DB4343</color>
+    <color name="colorInputCodeUnderline">#F0DE40</color>
+</resources>

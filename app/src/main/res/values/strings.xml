@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">Application Name</string>
+    <string name="errorDialogTitle">Ошибка подключения</string>
+    <string name="errorDialogMessage">Проверьте ваше соединение и попробуйте снова</string>
+    <string name="errorDialogButton">Повторить</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="changePhone">Сменить номер</string>
+</resources>
